@@ -198,8 +198,8 @@ class Estimator:
 
         meter = defaultdict(float)
         for input, target in zip(inputs, targets):
-            input = torch.autograd.Variable(input.cuda(async=True), volatile=not training)
-            target = torch.autograd.Variable(target.cuda(async=True), volatile=not training)
+            input = torch.autograd.Variable(input.cuda(non_blocking=True), volatile=not training)
+            target = torch.autograd.Variable(target.cuda(non_blocking=True), volatile=not training)
             output = self.model(input)
             if self.config.sigmoid:
                 meter = self.calculate_loss_3ch(output, target, meter, training, iter_size)

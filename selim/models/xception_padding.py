@@ -24,7 +24,7 @@ from __future__ import print_function
 import os
 import warnings
 
-from keras.applications.imagenet_utils import _obtain_input_shape
+from keras_applications.imagenet_utils import _obtain_input_shape
 from keras.models import Model
 from keras import layers
 from keras.layers import Dense

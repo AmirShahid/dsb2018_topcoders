@@ -21,7 +21,7 @@ import os
 import warnings
 
 from keras.applications import imagenet_utils
-from keras.applications.imagenet_utils import _obtain_input_shape
+from keras_applications.imagenet_utils import _obtain_input_shape
 from keras.models import Model
 from keras.layers import Activation
 from keras.layers import AveragePooling2D
